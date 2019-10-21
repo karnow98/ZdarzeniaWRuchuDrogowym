@@ -45,7 +45,7 @@ server <- function(input, output) {
     })
 }
 
-#jakiś komentarz bo cuś nie działczy :/
+#jakiś komentarz bo cuś nie działczy
 
 # Run the application 
 shinyApp(ui = ui, server = server)
