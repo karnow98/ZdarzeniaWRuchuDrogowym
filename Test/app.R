@@ -35,6 +35,7 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
+  ExclFile <- read.csv(file="C:\Users\pk\Desktop\ZdarzeniaWRuchuDrogowym/Dni.csv", header=TRUE, sep=",")
 
     output$distPlot <- renderPlot({
         # generate bins based on input$bins from ui.R
