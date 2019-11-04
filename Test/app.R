@@ -8,6 +8,7 @@
 # Eryk Olszewski dopisuje sie :p
 
 library(shiny)
+library(readxl) # biblioteka do czytania plikow excelowych
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
