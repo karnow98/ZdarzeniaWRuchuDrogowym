@@ -25,7 +25,7 @@ ui <- fluidPage(
       # Input: Selector for choosing dataset ----
       selectInput(inputId = "dataset",
                   label = "Choose a dataset:",
-                  choices = c("rock", "pressure", "cars")),
+                  choices = c("rock", "Wypadki", "cars")),
       
       # Input: Numeric entry for number of obs to view ----
       numericInput(inputId = "obs",
@@ -48,12 +48,12 @@ ui <- fluidPage(
 
 # Define server logic to summarize and view selected dataset ----
 server <- function(input, output) {
-  
+  data <- read.table("Dni.csv", header = T, sep = ";")
   # Return the requested dataset ----
   datasetInput <- reactive({
     switch(input$dataset,
            "rock" = rock,
-           "pressure" = pressure,
+           "Wypadki" = data,
            "cars" = cars)
   })
   
@@ -65,7 +65,7 @@ server <- function(input, output) {
   data <- read.csv("Dni.csv", header = T, sep = ";")
   # Show the first "n" observations ----
   output$view <- renderTable({
-    head(data, n = input$obs)
+    head(datasetInput(), n = input$obs)
   })
   
 }
