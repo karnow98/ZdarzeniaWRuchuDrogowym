@@ -8,46 +8,67 @@
 # Eryk Olszewski dopisuje sie :p
 
 library(shiny)
-library(readxl) # biblioteka do czytania plikow excelowych
 
-# Define UI for application that draws a histogram
+
+# Define UI for dataset viewer app ----
 ui <- fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-           plotOutput("distPlot")
-        )
+  
+  # App title ----
+  titlePanel("Wypadki Samochodowe"),
+  
+  # Sidebar layout with a input and output definitions ----
+  sidebarLayout(
+    
+    # Sidebar panel for inputs ----
+    sidebarPanel(
+      
+      # Input: Selector for choosing dataset ----
+      selectInput(inputId = "dataset",
+                  label = "Choose a dataset:",
+                  choices = c("rock", "pressure", "cars")),
+      
+      # Input: Numeric entry for number of obs to view ----
+      numericInput(inputId = "obs",
+                   label = "Number of observations to view:",
+                   value = 10)
+    ),
+    
+    # Main panel for displaying outputs ----
+    mainPanel(
+      
+      # Output: Verbatim text for data summary ----
+      verbatimTextOutput("summary"),
+      
+      # Output: HTML table with requested number of observations ----
+      tableOutput("view")
+      
     )
+  )
 )
 
-# Define server logic required to draw a histogram
+# Define server logic to summarize and view selected dataset ----
 server <- function(input, output) {
-  ExclFile <- read.csv(file="C:\Users\pk\Desktop\ZdarzeniaWRuchuDrogowym/Dni.csv", header=TRUE, sep=",")
-
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
-    })
+  
+  # Return the requested dataset ----
+  datasetInput <- reactive({
+    switch(input$dataset,
+           "rock" = rock,
+           "pressure" = pressure,
+           "cars" = cars)
+  })
+  
+  # Generate a summary of the dataset ----
+  #output$summary <- renderPrint({
+  #   data <- read.table("Dni.csv", header = T, sep = ";")
+  #    summary(data)
+  # })
+  data <- read.csv("Dni.csv", header = T, sep = ";")
+  # Show the first "n" observations ----
+  output$view <- renderTable({
+    head(data, n = input$obs)
+  })
+  
 }
-
-#jakiś komentarz bo cuś nie działczy :/
 
 # Run the application 
 shinyApp(ui = ui, server = server)
