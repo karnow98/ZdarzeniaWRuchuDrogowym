@@ -57,11 +57,11 @@ server <- function(input, output) {
            "cars" = cars)
   })
   
-  # Generate a summary of the dataset ----
-  #output$summary <- renderPrint({
-  #   data <- read.table("Dni.csv", header = T, sep = ";")
-  #    summary(data)
-  # })
+   Generate a summary of the dataset ----
+  output$summary <- renderPrint({
+    data <- read.table("Dni.csv", header = T, sep = ";")
+      summary(data)
+   })
   data <- read.csv("Dni.csv", header = T, sep = ";")
   # Show the first "n" observations ----
   output$view <- renderTable({
