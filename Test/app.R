@@ -57,7 +57,7 @@ server <- function(input, output) {
            "cars" = cars)
   })
   
-   Generate a summary of the dataset ----
+  # Generate a summary of the dataset ----
   output$summary <- renderPrint({
     data <- read.table("Dni.csv", header = T, sep = ";")
       summary(data)
