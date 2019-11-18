@@ -1,0 +1,22 @@
+Sprawcy - pojazd uczestnika;;;;
+;;;;
+;;;;
+;2018;;;
+Rodzaj pojazdu;Liczba Wypadkow;Liczba Zabitych;Liczba Rannych;Liczba Kolizji
+Autobus inny;92;15;209;1604
+Autobus komunikacji publicznej;299;5;365;2382
+Ci¹gnik rolniczy;130;19;143;1572
+Czteroko³owiec;35;3;37;75
+Czteroko³owiec lekki;19;2;20;70
+Inny;79;9;85;1201
+Motocykl inny;852;121;843;2076
+Motocykl o poj. do 125 cm3 ( do 11 kw/0,1 KW/kg);214;25;216;618
+Motorower;635;45;638;2291
+Poci¹g;0;0;0;4
+Pojazd nieustalony;557;10;596;19059
+Rower;1713;132;1636;4697
+Samochód ciê¿arowy DMC do 3,5 T;1350;123;1637;23183
+Samochód ciê¿arowy DMC powy¿ej 3,5 T;878;116;1077;22977
+Samochód osobowy;20622;1547;25614;291762
+Tramwaj, trolejbus;81;5;145;231
+Podsumowanie;27556;2177;33261;373802

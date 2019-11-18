@@ -9,7 +9,6 @@
 
 library(shiny)
 
-
 # Define UI for dataset viewer app ----
 ui <- fluidPage(
   
@@ -42,8 +41,6 @@ ui <- fluidPage(
       
       # Output: Verbatim text for data summary ----
 #      verbatimTextOutput("summary"),
-      
-
 
       # Output: HTML table with requested number of observations ----
       tableOutput("view")
@@ -71,7 +68,7 @@ server <- function(input, output) {
       summary(data)
    })
   data <- read.csv("Dni.csv", header = T, sep = ";")
-  
+
   
   # Show the first "n" observations ----
   output$view <- renderTable({
