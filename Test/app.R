@@ -9,7 +9,6 @@
 
 library(shiny)
 
-
 # Define UI for dataset viewer app ----
 ui <- fluidPage(
   
@@ -24,10 +23,14 @@ ui <- fluidPage(
       
       # Input: Selector for choosing dataset ----
       selectInput(inputId = "dataset",
-                  label = "Choose a dataset:",
-                  choices = c("rock", "Wypadki", "cars")),
+                  label = "Wybierz kategorię:",
+                  choices = c("Wypadki", "")),
       
-      # Input: Numeric entry for number of obs to view ----
+      selectInput(inputId = "dzien",
+                  label="Dzień Tygodnia:",
+                  choices = c("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela")),
+      
+      # Input: Numeric entry for number of obs to view ----      
       numericInput(inputId = "obs",
                    label = "Number of observations to view:",
                    value = 10)
@@ -37,8 +40,8 @@ ui <- fluidPage(
     mainPanel(
       
       # Output: Verbatim text for data summary ----
-      verbatimTextOutput("summary"),
-      
+#      verbatimTextOutput("summary"),
+
       # Output: HTML table with requested number of observations ----
       tableOutput("view")
       
@@ -52,9 +55,11 @@ server <- function(input, output) {
   # Return the requested dataset ----
   datasetInput <- reactive({
     switch(input$dataset,
-           "rock" = rock,
-           "Wypadki" = data,
-           "cars" = cars)
+#           "rock" = rock,
+           "Wypadki" = data
+#,
+#           "cars" = cars
+)
   })
   
   # Generate a summary of the dataset ----
@@ -63,6 +68,8 @@ server <- function(input, output) {
       summary(data)
    })
   data <- read.csv("Dni.csv", header = T, sep = ";")
+
+  
   # Show the first "n" observations ----
   output$view <- renderTable({
     head(datasetInput(), n = input$obs)
