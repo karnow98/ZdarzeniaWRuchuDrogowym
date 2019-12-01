@@ -8,73 +8,44 @@
 # Eryk Olszewski dopisuje sie :p
 
 library(shiny)
-
-# Define UI for dataset viewer app ----
-ui <- fluidPage(
+library(datasets)
+options(scipen=999)
+data <- read.table("Dni.csv", header = T, sep = ";",row.names = 1)
+data2 <- data.matrix(data)
+# Define UI for application that draws a histogram
+ui <- fluidPage(    
   
-  # App title ----
-  titlePanel("Wypadki Samochodowe"),
-  
-  # Sidebar layout with a input and output definitions ----
-  sidebarLayout(
-    
-    # Sidebar panel for inputs ----
+  # Give the page a title
+  titlePanel("Telephones by region"),
+  # Generate a row with a sidebar
+  sidebarLayout(      
+    # Define the sidebar with one input
     sidebarPanel(
-      
-      # Input: Selector for choosing dataset ----
-      selectInput(inputId = "dataset",
-                  label = "Wybierz kategorię:",
-                  choices = c("Wypadki", "")),
-      
-      selectInput(inputId = "dzien",
-                  label="Dzień Tygodnia:",
-                  choices = c("Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela")),
-      
-      # Input: Numeric entry for number of obs to view ----      
-      numericInput(inputId = "obs",
-                   label = "Number of observations to view:",
-                   value = 10)
+      selectInput("region", "Region:", 
+                  choices=colnames(data2)),
+      hr(),
+      helpText("Data from AT&T (1961) The World's Telephones.")
     ),
     
-    # Main panel for displaying outputs ----
+    # Create a spot for the barplot
     mainPanel(
-      
-      # Output: Verbatim text for data summary ----
-#      verbatimTextOutput("summary"),
-
-      # Output: HTML table with requested number of observations ----
-      tableOutput("view")
-      
+      plotOutput("phonePlot")
     )
+    
   )
 )
 
+
 # Define server logic to summarize and view selected dataset ----
 server <- function(input, output) {
-  data <- read.table("Dni.csv", header = T, sep = ";")
-  # Return the requested dataset ----
-  datasetInput <- reactive({
-    switch(input$dataset,
-#           "rock" = rock,
-           "Wypadki" = data
-#,
-#           "cars" = cars
-)
+  
+  output$phonePlot <- renderPlot({
+    # Render a barplot
+    barplot(data2[,input$region], 
+            main=input$region,
+            ylab="Liczba Wypadkow",
+            xlab="Dni",cex.names=0.9, xpd = FALSE)
   })
-  
-  # Generate a summary of the dataset ----
-  output$summary <- renderPrint({
-    data <- read.table("Dni.csv", header = T, sep = ";")
-      summary(data)
-   })
-  data <- read.csv("Dni.csv", header = T, sep = ";")
-
-  
-  # Show the first "n" observations ----
-  output$view <- renderTable({
-    head(datasetInput(), n = input$obs)
-  })
-  
 }
 
 # Run the application 
