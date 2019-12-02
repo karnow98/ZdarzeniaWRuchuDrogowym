@@ -1,8 +1,3 @@
-Sprawcy - pojazd uczestnika;;;;
-;;;;
-;;;;
-;;;;
-;2017;;;
 Rodzaj pojazdu;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
 Autobus inny;92;5;213;1629
 Autobus komunikacji publicznej;319;9;434;2535
@@ -21,4 +16,3 @@ Samochód ciê¿arowy DMC powy¿ej 3,5 T;962;119;1264;22603
 Samochód osobowy;21733;1506;27672;291298
 Tramwaj, trolejbus;57;1;74;231
 Podsumowanie ca³kowite;28359;2091;35166;368306
-;;;;

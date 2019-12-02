@@ -1,7 +1,3 @@
-Statystyka ogólna w podziale na godziny;;;;
-;;;;
-;;;;
-;2017;;;
 Godzina zdarzenia;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
 0;324;53;423;3847
 1;266;47;321;2819
@@ -28,4 +24,3 @@ Godzina zdarzenia;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
 22;769;104;890;9766
 23;467;70;582;5902
 Podsumowanie ca³kowite;32760;2831;39466;436469
-;;;;
