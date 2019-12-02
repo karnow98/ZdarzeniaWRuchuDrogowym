@@ -16,15 +16,15 @@ data2 <- data.matrix(data)
 ui <- fluidPage(    
   
   # Give the page a title
-  titlePanel("Telephones by region"),
+  titlePanel("Wypadki drogowe"),
   # Generate a row with a sidebar
   sidebarLayout(      
     # Define the sidebar with one input
     sidebarPanel(
-      selectInput("region", "Region:", 
+      selectInput("region", "Kategoria:", 
                   choices=colnames(data2)),
       hr(),
-      helpText("Data from AT&T (1961) The World's Telephones.")
+      helpText("Dane ze strony dane.gov.pl")
     ),
     
     # Create a spot for the barplot
