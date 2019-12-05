@@ -1,33 +1,15 @@
-<<<<<<< Updated upstream:Bazy/2016/rodzaj-uytkownika-drogi.csv
-Rodzaj uøytkownika drogi;Liczba zabitych;Liczba rannych
-Motorowerzyúci;77;1 468
-Piesi;868;7 974
-Pojazd nieustalony;0;35
-Rowerzyúci;271;4 298
-Uøytkownicy autobusÛw;8;1 155
-Uøytkownicy ciπgnikÛw;13;103
-Uøytkownicy czteroko≥owcÛw;12;58
-Uøytkownicy innych pojazdÛw;2;83
-Uøytkownicy motocykli;244;2 067
-Uøytkownicy pociπgu;0;9
-Uøytkownicy samochodÛw ciÍøarowych;114;1 326
-Uøytkownicy samochodÛw osobowych;1 417;22 027
-Uøytkownicy tramwajÛw i trolejbusÛw;0;163
-Podsumowanie ca≥kowite;3 026;40 766
-=======
-Rodzaj uøytkownika drogi;Liczba zabitych;Liczba rannych
-Motorowerzyúci;77;1468
+Rodzaj u≈ºytkownika drogi;Liczba zabitych;Liczba rannych
+Motorowerzy≈õci;77;1468
 Piesi;868;7974
 Pojazd nieustalony;0;35
-Rowerzyúci;271;4298
-Uøytkownicy autobusÛw;8;1155
-Uøytkownicy ciπgnikÛw;13;103
-Uøytkownicy czteroko≥owcÛw;12;58
-Uøytkownicy innych pojazdÛw;2;83
-Uøytkownicy motocykli;244;2 067
-Uøytkownicy pociπgu;0;9
-Uøytkownicy samochodÛw ciÍøarowych;114;1326
-Uøytkownicy samochodÛw osobowych;1417;22027
-Uøytkownicy tramwajÛw i trolejbusÛw;0;163
+Rowerzy≈õci;271;4298
+U≈ºytkownicy autobus√≥w;8;1155
+U≈ºytkownicy ciƒÖgnik√≥w;13;103
+U≈ºytkownicy czteroko≈Çowc√≥w;12;58
+U≈ºytkownicy innych pojazd√≥w;2;83
+U≈ºytkownicy motocykli;244;2 067
+U≈ºytkownicy pociƒÖgu;0;9
+U≈ºytkownicy samochod√≥w ciƒô≈ºarowych;114;1326
+U≈ºytkownicy samochod√≥w osobowych;1417;22027
+U≈ºytkownicy tramwaj√≥w i trolejbus√≥w;0;163
 Podsumowanie;3026;40766
->>>>>>> Stashed changes:Test/Bazy/2016/Ofiary_rodzaj_u≈ºytkownika_drogi.csv
