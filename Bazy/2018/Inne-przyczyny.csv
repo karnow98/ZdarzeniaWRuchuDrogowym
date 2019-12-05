@@ -1,23 +1,15 @@
-<<<<<<< Updated upstream:Bazy/2018/Inne-przyczyny.csv
-Przyczyny - pozosta³e;;;;
-;;;;
-;;;;
-;2018;;;
-Inne przyczyny;Liczba Wypadkow;Liczba Zabitych;Liczba Rannych;Liczba Kolizji
-=======
-Inne przyczyny;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
->>>>>>> Stashed changes:Test/Bazy/2018/Inne_przyczyny.csv
-Dzia³anie sygnalizacji œwietlnej;0;0;0;5
+Inne przyczyny;Liczba wypadkÃ³w;Liczba zabitych;Liczba rannych;Liczba kolizji
+DziaÅ‚anie sygnalizacji Å›wietlnej;0;0;0;5
 Inne;142;7;156;3982
-Nieprawid³owo dzia³aj¹ca zapora kolej.;0;0;0;7
-Niesprawnoœæ techniczna pojazdu;38;7;55;624
+NieprawidÅ‚owo dziaÅ‚ajÄ…ca zapora kolej.;0;0;0;7
+NiesprawnoÅ›Ä‡ techniczna pojazdu;38;7;55;624
 Nieustalone;807;247;836;9531
-Obiekty, zwierzêta na drodze;332;20;403;25895
+Obiekty, zwierzÄ™ta na drodze;332;20;403;25895
 Organizacja ruchu;1;0;2;26
-Oœlepienie przez inny pojazd lub s³oñce;24;3;25;174
-Po¿ar pojazdu;2;1;1;218
+OÅ›lepienie przez inny pojazd lub sÅ‚oÅ„ce;24;3;25;174
+PoÅ¼ar pojazdu;2;1;1;218
 Stan jezdni;77;1;86;8555
-Utrata przytomnoœci, œmieræ kieruj¹cego;76;7;101;354
-Z winy pasa¿era;116;5;118;398
-Zabezpieczenie robót na drodze;4;0;4;453
+Utrata przytomnoÅ›ci, Å›mierÄ‡ kierujÄ…cego;76;7;101;354
+Z winy pasaÅ¼era;116;5;118;398
+Zabezpieczenie robÃ³t na drodze;4;0;4;453
 Podsumowanie;1619;298;1787;50222
