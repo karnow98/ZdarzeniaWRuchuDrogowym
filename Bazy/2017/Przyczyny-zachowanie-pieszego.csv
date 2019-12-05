@@ -1,28 +1,10 @@
-<<<<<<< Updated upstream:Bazy/2017/Przyczyny-zachowanie-pieszego.csv
-Przyczyny - Zachowanie siê pieszego;;;;
-;;;;
-;;;;
-;2017;;;
-Zachowanie pieszego;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
-Chodzenie nieprawid³ow¹ stron¹ drogi;107;41;70;116
+Zachowanie pieszego;Liczba wypadkÃ³w;Liczba zabitych;Liczba rannych;Liczba kolizji
+Chodzenie nieprawidÅ‚owÄ… stronÄ… drogi;107;41;70;116
 Inne przyczyny;140;22;123;344
-Le¿enie, siedzenie, klêczenie, stanie na jezdni;129;73;64;55
-Nieostro¿ne wejœcie na jezdniê: przed jad¹cym pojazdem;1184;188;1021;1346
-Nieostro¿ne wejœcie na jezdniê: zza pojazdu, przeszkody;268;18;253;281
+LeÅ¼enie, siedzenie, klÄ™czenie, stanie na jezdni;129;73;64;55
+NieostroÅ¼ne wejÅ›cie na jezdniÄ™: przed jadÄ…cym pojazdem;1184;188;1021;1346
+NieostroÅ¼ne wejÅ›cie na jezdniÄ™: zza pojazdu, przeszkody;268;18;253;281
 Przekraczanie jezdni w miejscu niedozwolonym;289;58;238;255
-Wejœcie na jezdniê przy czerwonym œwietle;247;24;229;234
-Zatrzymanie, cofniêcie siê;14;1;14;11
-Podsumowanie ca³kowite;2378;425;2012;2642
-;;;;
-=======
-Zachowanie pieszego;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
-Chodzenie nieprawid³ow¹ stron¹ drogi;107;41;70;116
-Inne przyczyny;140;22;123;344
-Le¿enie, siedzenie, klêczenie, stanie na jezdni;129;73;64;55
-Nieostro¿ne wejœcie na jezdniê: przed jad¹cym pojazdem;1184;188;1021;1346
-Nieostro¿ne wejœcie na jezdniê: zza pojazdu, przeszkody;268;18;253;281
-Przekraczanie jezdni w miejscu niedozwolonym;289;58;238;255
-Wejœcie na jezdniê przy czerwonym œwietle;247;24;229;234
-Zatrzymanie, cofniêcie siê;14;1;14;11
+WejÅ›cie na jezdniÄ™ przy czerwonym Å›wietle;247;24;229;234
+Zatrzymanie, cofniÄ™cie siÄ™;14;1;14;11
 Podsumowanie;2378;425;2012;2642
->>>>>>> Stashed changes:Test/Bazy/2017/Przyczyny_zachowanie_pieszego.csv
