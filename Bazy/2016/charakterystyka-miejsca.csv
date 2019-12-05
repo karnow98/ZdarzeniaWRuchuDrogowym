@@ -1,41 +1,19 @@
-<<<<<<< Updated upstream:Bazy/2016/charakterystyka-miejsca.csv
-Informacja dodatkowa;Liczba wypadk體;Liczba zabitych;Liczba rannych;Liczba kolizji
+Informacja dodatkowa;Liczba wypadk贸w;Liczba zabitych;Liczba rannych;Liczba kolizji
 Chodnik, droga dla pieszych;650;21;686;4062
-Droga, pas ruchu, 渓uza dla rower體;390;4;399;863
+Droga, pas ruchu, 艣luza dla rower贸w;390;4;399;863
 Jezdnia;24774;2342;31204;347714
-Most, wiadukt, 彻cznica, tunel;120;13;153;1961
+Most, wiadukt, 艂膮cznica, tunel;120;13;153;1961
 Parking, plac, MOP;207;6;215;26196
-Pas dziel筩y jezdnie;35;1;41;757
+Pas dziel膮cy jezdnie;35;1;41;757
 Pobocze;1111;187;1371;8506
-Przejazd dla rowerzyst體;473;12;468;832
-Przejazd kolejowy niestrze縪ny;55;26;50;293
-Przejazd kolejowy strze縪ny;18;5;20;1024
+Przejazd dla rowerzyst贸w;473;12;468;832
+Przejazd kolejowy niestrze偶ony;55;26;50;293
+Przejazd kolejowy strze偶ony;18;5;20;1024
 Przejazd tramwajowy, torowisko tramwajowe;189;11;257;625
-Przej渃ie dla pieszych;4319;264;4324;4020
-Przewi箊ka na drodze dwujezdniowej;11;1;14;115
+Przej艣cie dla pieszych;4319;264;4324;4020
+Przewi膮zka na drodze dwujezdniowej;11;1;14;115
 Przystanek komunikacji publicznej;170;4;173;548
 Roboty drogowe, oznakowanie tymczasowe;64;11;90;1147
-Skarpa, r體;772;104;968;4661
-Wjazd, wyjazd z posesji, pola;306;14;333;3298
-Podsumowanie ca砶owite;33664;3026;40766;406622
-=======
-Informacja dodatkowa;Liczba wypadk體;Liczba zabitych;Liczba rannych;Liczba kolizji
-Chodnik, droga dla pieszych;650;21;686;4062
-Droga, pas ruchu, 渓uza dla rower體;390;4;399;863
-Jezdnia;24774;2342;31204;347714
-Most, wiadukt, 彻cznica, tunel;120;13;153;1961
-Parking, plac, MOP;207;6;215;26196
-Pas dziel筩y jezdnie;35;1;41;757
-Pobocze;1111;187;1371;8506
-Przejazd dla rowerzyst體;473;12;468;832
-Przejazd kolejowy niestrze縪ny;55;26;50;293
-Przejazd kolejowy strze縪ny;18;5;20;1024
-Przejazd tramwajowy, torowisko tramwajowe;189;11;257;625
-Przej渃ie dla pieszych;4319;264;4324;4020
-Przewi箊ka na drodze dwujezdniowej;11;1;14;115
-Przystanek komunikacji publicznej;170;4;173;548
-Roboty drogowe, oznakowanie tymczasowe;64;11;90;1147
-Skarpa, r體;772;104;968;4661
+Skarpa, r贸w;772;104;968;4661
 Wjazd, wyjazd z posesji, pola;306;14;333;3298
 Podsumowanie;33664;3026;40766;406622
->>>>>>> Stashed changes:Test/Bazy/2016/Charakterystyka_miejsca.csv
