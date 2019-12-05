@@ -1,8 +1,12 @@
+<<<<<<< Updated upstream:Bazy/2018/Przyczyny-zachowanie-kierujÄ…cego.csv
 Przyczyny - Zachowanie siê kieruj¹cego;;;;
 ;;;;
 ;;;;
 ;2018;;;
 ;Liczba Wypadkow;Liczba Zabitych;Liczba Rannych;Liczba Kolizji
+=======
+Zachowanie kieruj¹cego;Liczba wypadkow;Liczba zabitych;Liczba rannych;Liczba kolizji
+>>>>>>> Stashed changes:Test/Bazy/2018/Przyczyny_zachowanie_kierujÄ…cego.csv
 Gwa³towne hamowanie;227;2;272;824
 Inne przyczyny;1654;234;1850;20720
 Jazda bez wymaganych œwiate³;27;9;26;63

@@ -1,8 +1,12 @@
+<<<<<<< Updated upstream:Bazy/2018/Przyczyny-zachowanie-pieszego.csv
 Przyczyny - Zachowanie pieszego ;;;;
 ;;;;
 ;;;;
 ;2018;;;
 Zachowanie pieszego;Liczba Wypadkow;Liczba Zabitych;Liczba Rannych;Liczba Kolizji
+=======
+Zachowanie pieszego;Liczba wypadkow;Liczba zabitych;Liczba rannych;Liczba kolizji
+>>>>>>> Stashed changes:Test/Bazy/2018/Przyczyny_zachowanie_pieszego.csv
 Chodzenie nieprawid³ow¹ stron¹ drogi;103;23;80;84
 Inne przyczyny;140;21;120;341
 Le¿enie, siedzenie, klêczenie, stanie na jezdni;129;70;59;43

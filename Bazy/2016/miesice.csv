@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:Bazy/2016/miesice.csv
 Miesi¹c;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
 Styczeñ;2 032;164;2 450;29 313
 Luty;2 124;195;2 552;28 156
@@ -12,3 +13,19 @@ PaŸdziernik;3 083;306;3 760;39 205
 Listopad;2 651;250;3 038;36 395
 Grudzieñ;2 965;292;3 456;40 033
 Podsumowanie ca³kowite;33 664;3 026;40 766;406 622
+=======
+Miesi¹c;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
+Styczeñ;2032;164;2450;29313
+Luty;2124;195;2552;28156
+Marzec;2098;204;2656;30923
+Kwiecieñ;2514;217;2992;32055
+Maj;3128;244;3841;34318
+Czerwiec;3241;278;3923;34971
+Lipiec;3309;255;4205;33107
+Sierpieñ;3368;312;4174;34033
+Wrzesieñ;3151;309;3719;34113
+PaŸdziernik;3083;306;3760;39205
+Listopad;2651;250;3038;36395
+Grudzieñ;2965;292;3456;40033
+Podsumowanie;33664;3026;40766;406622
+>>>>>>> Stashed changes:Test/Bazy/2016/MiesiÄ…ce.csv

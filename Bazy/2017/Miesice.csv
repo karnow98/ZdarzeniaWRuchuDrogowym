@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:Bazy/2017/Miesice.csv
 Statystyka ogólna w podziale na miesi¹ce;;;;
 ;;;;
 ;;;;
@@ -17,3 +18,19 @@ Listopad;2846;283;3269;38720
 Grudzieñ;2983;292;3499;40758
 Podsumowanie ca³kowite;32760;2831;39466;436469
 ;;;;
+=======
+Miesi¹c;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
+Styczeñ;1801;153;2199;34346
+Luty;1807;146;2198;30543
+Marzec;2133;184;2577;32865
+Kwiecieñ;2328;190;2914;34341
+Maj;2845;213;3430;36113
+Czerwiec;3258;254;3948;35839
+Lipiec;3244;267;4058;35190
+Sierpieñ;3226;274;3923;36111
+Wrzesieñ;2995;296;3514;38566
+PaŸdziernik;3294;279;3937;43077
+Listopad;2846;283;3269;38720
+Grudzieñ;2983;292;3499;40758
+Podsumowanie;32760;2831;39466;436469
+>>>>>>> Stashed changes:Test/Bazy/2017/MiesiÄ…ce.csv

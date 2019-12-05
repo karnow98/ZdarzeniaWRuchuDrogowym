@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:Bazy/2017/Inne-przyczyny.csv
 Przyczyny - Pozosta³e;;;;
 ;;;;
 ;;;;
@@ -18,3 +19,20 @@ Z winy pasa¿era;130;3;134;382
 Zabezpieczenie robót na drodze;2;0;2;508
 Podsumowanie ca³kowite;1654;273;1836;56105
 ;;;;
+=======
+Inne przyczyny;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
+Dzia³anie sygnalizacji œwietlnej;0;0;0;5
+Inne;166;11;186;4558
+Nieprawid³owo dzia³aj¹ca zapora kolej.;1;1;1;9
+Niesprawnoœæ techniczna pojazdu;40;6;49;612
+Nieustalone;830;231;892;9103
+Obiekty, zwierzêta na drodze;334;14;400;27224
+Organizacja ruchu;0;0;0;41
+Oœlepienie przez inny pojazd lub s³oñce;23;2;26;124
+Po¿ar pojazdu;0;0;0;234
+Stan jezdni;70;1;78;12989
+Utrata przytomnoœci, œmieræ kieruj¹cego;58;4;68;316
+Z winy pasa¿era;130;3;134;382
+Zabezpieczenie robót na drodze;2;0;2;508
+Podsumowanie;1654;273;1836;56105
+>>>>>>> Stashed changes:Test/Bazy/2017/Inne_przyczyny.csv

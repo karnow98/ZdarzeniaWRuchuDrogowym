@@ -1,5 +1,13 @@
+<<<<<<< Updated upstream:Bazy/2016/sprawcy-pod-dziaaniem-alkoholu.csv
 Wina;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
 wspó³wina uczestników ruchu;36;4;41;70
 z winy kieruj¹cego;1 686;221;2 100;7 391
 z winy pieszego;573;81;500;531
 Podsumowanie ca³kowite;2 295;306;2 641;7 992
+=======
+Wina;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
+wspó³wina uczestników ruchu;36;4;41;70
+z winy kieruj¹cego;1686;221;2 100;7391
+z winy pieszego;573;81;500;531
+Podsumowanie;2295;306;2641;7992
+>>>>>>> Stashed changes:Test/Bazy/2016/Alkohol_-_sprawcy.csv

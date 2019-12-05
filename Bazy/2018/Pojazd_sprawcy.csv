@@ -1,8 +1,12 @@
+<<<<<<< Updated upstream:Bazy/2018/Pojazd_sprawcy.csv
 Sprawcy - pojazd uczestnika;;;;
 ;;;;
 ;;;;
 ;2018;;;
 Rodzaj pojazdu;Liczba Wypadkow;Liczba Zabitych;Liczba Rannych;Liczba Kolizji
+=======
+Rodzaj pojazdu;Liczba wypadkow;Liczba zabitych;Liczba rannych;Liczba kolizji
+>>>>>>> Stashed changes:Test/Bazy/2018/Pojazd_sprawcy.csv
 Autobus inny;92;15;209;1604
 Autobus komunikacji publicznej;299;5;365;2382
 Ci¹gnik rolniczy;130;19;143;1572

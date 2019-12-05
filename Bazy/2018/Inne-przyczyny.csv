@@ -1,8 +1,12 @@
+<<<<<<< Updated upstream:Bazy/2018/Inne-przyczyny.csv
 Przyczyny - pozosta³e;;;;
 ;;;;
 ;;;;
 ;2018;;;
 Inne przyczyny;Liczba Wypadkow;Liczba Zabitych;Liczba Rannych;Liczba Kolizji
+=======
+Inne przyczyny;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
+>>>>>>> Stashed changes:Test/Bazy/2018/Inne_przyczyny.csv
 Dzia³anie sygnalizacji œwietlnej;0;0;0;5
 Inne;142;7;156;3982
 Nieprawid³owo dzia³aj¹ca zapora kolej.;0;0;0;7

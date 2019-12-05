@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:Bazy/2016/charakterystyka-miejsca.csv
 Informacja dodatkowa;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
 Chodnik, droga dla pieszych;650;21;686;4062
 Droga, pas ruchu, œluza dla rowerów;390;4;399;863
@@ -17,3 +18,24 @@ Roboty drogowe, oznakowanie tymczasowe;64;11;90;1147
 Skarpa, rów;772;104;968;4661
 Wjazd, wyjazd z posesji, pola;306;14;333;3298
 Podsumowanie ca³kowite;33664;3026;40766;406622
+=======
+Informacja dodatkowa;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
+Chodnik, droga dla pieszych;650;21;686;4062
+Droga, pas ruchu, œluza dla rowerów;390;4;399;863
+Jezdnia;24774;2342;31204;347714
+Most, wiadukt, ³¹cznica, tunel;120;13;153;1961
+Parking, plac, MOP;207;6;215;26196
+Pas dziel¹cy jezdnie;35;1;41;757
+Pobocze;1111;187;1371;8506
+Przejazd dla rowerzystów;473;12;468;832
+Przejazd kolejowy niestrze¿ony;55;26;50;293
+Przejazd kolejowy strze¿ony;18;5;20;1024
+Przejazd tramwajowy, torowisko tramwajowe;189;11;257;625
+Przejœcie dla pieszych;4319;264;4324;4020
+Przewi¹zka na drodze dwujezdniowej;11;1;14;115
+Przystanek komunikacji publicznej;170;4;173;548
+Roboty drogowe, oznakowanie tymczasowe;64;11;90;1147
+Skarpa, rów;772;104;968;4661
+Wjazd, wyjazd z posesji, pola;306;14;333;3298
+Podsumowanie;33664;3026;40766;406622
+>>>>>>> Stashed changes:Test/Bazy/2016/Charakterystyka_miejsca.csv

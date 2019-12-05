@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:Bazy/2016/wiek-sprawcy-kierujcego.csv
 Wiek;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
 0-6;14;0;15;40
 7-14;334;14;339;651
@@ -8,3 +9,15 @@ Wiek;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
 60+;4343;370;5100;50484
 b/d;1278;18;1398;30944
 Podsumowanie ca³kowite;29081;2284;36150;347845
+=======
+Wiek;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
+0 - 6;14;0;15;40
+7 - 14;334;14;339;651
+15 - 17;312;23;353;949
+18 - 24;5823;542;7790;60877
+25 - 39;9491;744;12020;112010
+40 - 59;7486;573;9135;91890
+60+;4343;370;5100;50484
+b/d;1278;18;1398;30944
+Podsumowanie;29081;2284;36150;347845
+>>>>>>> Stashed changes:Test/Bazy/2016/Sprawcy_wiek_kierujÄ…cego.csv

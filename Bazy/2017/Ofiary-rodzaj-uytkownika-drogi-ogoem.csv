@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:Bazy/2017/Ofiary-rodzaj-uytkownika-drogi-ogoem.csv
 Ofiary - rodzaj uøytkownika drogi;;
 ;;
 ;;
@@ -19,3 +20,20 @@ Uøytkownicy samochodÛw osobowych;1295;21729
 Uøytkownicy tramwajÛw i trolejbusÛw;1;155
 Podsumowanie ca≥kowite;2831;39466
 ;;
+=======
+Rodzaj uøytkownika drogi;Liczba zabitych;Liczba rannych
+Motorowerzyúci;55;1276
+Piesi;873;7587
+Pojazd nieustalony;0;23
+Rowerzyúci;220;3824
+Uøytkownicy autobusÛw;3;1322
+Uøytkownicy ciπgnikÛw;17;92
+Uøytkownicy czteroko≥owcÛw;6;58
+Uøytkownicy innych pojazdÛw;4;66
+Uøytkownicy motocykli;231;2032
+Uøytkownicy pociπgu;0;31
+Uøytkownicy samochodÛw ciÍøarowych;126;1271
+Uøytkownicy samochodÛw osobowych;1295;21729
+Uøytkownicy tramwajÛw i trolejbusÛw;1;155
+Podsumowanie;2831;39466
+>>>>>>> Stashed changes:Test/Bazy/2017/Ofiary_rodzaj_u≈ºytkownika_drogi.csv
