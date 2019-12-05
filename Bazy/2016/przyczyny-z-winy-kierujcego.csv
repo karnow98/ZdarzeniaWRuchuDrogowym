@@ -1,58 +1,29 @@
-<<<<<<< Updated upstream:Bazy/2016/przyczyny-z-winy-kierujcego.csv
-Zachowanie kieruj¹cego;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
-Gwa³towne hamowanie;202;3;230;769
+Zachowanie kierujÄ…cego;Liczba wypadkÃ³w;Liczba zabitych;Liczba rannych;Liczba kolizji
+GwaÅ‚towne hamowanie;202;3;230;769
 Inne przyczyny;1389;236;1538;14878
-Jazda bez wymaganych œwiate³;38;11;34;95
-Niedostosowanie prêdkoœci do warunków ruchu;7195;846;9619;61106
-Nieprawid³owe cofanie;472;15;470;39434
-Nieprawid³owe omijanie;412;32;473;20487
-Nieprawid³owe przeje¿d¿anie przejazdu dla rowerzystów;272;7;267;449
-Nieprawid³owe skrêcanie;789;56;897;14050
-Nieprawid³owe wymijanie;516;62;667;8987
-Nieprawid³owe wyprzedzanie;1385;180;1841;9149
-Nieprawid³owe zatrzymywanie, postój;18;2;22;977
-Nieprawid³owe Zawracanie;145;6;205;1521
-Nieprawid³owe zmienianie pasa ruchu;666;65;830;25904
-Nieprzestrzeganie znaków i innych sygna³ów;120;1;159;1976
-Niestosowanie siê do sygnalizacji œwietlnej;453;23;648;3757
-Nieudzielenie pierwszeñstwa pieszemu;48;1;56;153
-Nieudzielenie pierwszeñstwa przejazdu;7420;343;9516;70165
-Nieust¹pienie pierwszeñstwa pieszemu na przejœciu dla pieszych;3487;206;3492;2677
-Nieust¹pienie pierwszeñstwa pieszemu przy skrêcaniu w drogê poprzeczn¹;241;2;249;260
-Nieust¹pienie pierwszeñstwa pieszemu w innych okolicznoœciach;542;35;521;611
-Niezachowanie bezp. odleg. miêdzy pojazdami;2521;51;3332;67885
-Omijanie pojazdu przed przejœciem dla pieszych;80;2;89;108
-Wyprzedzanie pojazdu przed przejœciem dla pieszych;15;1;14;54
-Zmêczenie, zaœniêcie;655;98;981;2393
-Podsumowanie ca³kowite;29081;2284;36150;347845
-=======
-Zachowanie kieruj¹cego;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
-Gwa³towne hamowanie;202;3;230;769
-Inne przyczyny;1389;236;1538;14878
-Jazda bez wymaganych œwiate³;38;11;34;95
-Niedostosowanie prêdkoœci do warunków ruchu;7195;846;9619;61106
-Nieprawid³owe cofanie;472;15;470;39434
-Nieprawid³owe omijanie;412;32;473;20487
-Nieprawid³owe przeje¿d¿anie przejazdu dla rowerzystów;272;7;267;449
-Nieprawid³owe skrêcanie;789;56;897;14050
-Nieprawid³owe wymijanie;516;62;667;8987
-Nieprawid³owe wyprzedzanie;1385;180;1841;9149
-Nieprawid³owe zatrzymywanie, postój;18;2;22;977
-Nieprawid³owe Zawracanie;145;6;205;1521
-Nieprawid³owe zmienianie pasa ruchu;666;65;830;25904
-Nieprzestrzeganie znaków i innych sygna³ów;120;1;159;1976
-Niestosowanie siê do sygnalizacji œwietlnej;453;23;648;3757
-Nieudzielenie pierwszeñstwa przejazdu;7420;343;9516;70165
-Nieust¹pienie pierwszeñstwa pieszemu na przejœciu dla pieszych;3487;206;3492;2677
-Nieust¹pienie pierwszeñstwa pieszemu przy skrêcaniu w drogê poprzeczn¹;241;2;249;260
-Nieust¹pienie pierwszeñstwa pieszemu w innych okolicznoœciach;542;35;521;611
+Jazda bez wymaganych Å›wiateÅ‚;38;11;34;95
+Niedostosowanie prÄ™dkoÅ›ci do warunkÃ³w ruchu;7195;846;9619;61106
+NieprawidÅ‚owe cofanie;472;15;470;39434
+NieprawidÅ‚owe omijanie;412;32;473;20487
+NieprawidÅ‚owe przejeÅ¼dÅ¼anie przejazdu dla rowerzystÃ³w;272;7;267;449
+NieprawidÅ‚owe skrÄ™canie;789;56;897;14050
+NieprawidÅ‚owe wymijanie;516;62;667;8987
+NieprawidÅ‚owe wyprzedzanie;1385;180;1841;9149
+NieprawidÅ‚owe zatrzymywanie, postÃ³j;18;2;22;977
+NieprawidÅ‚owe Zawracanie;145;6;205;1521
+NieprawidÅ‚owe zmienianie pasa ruchu;666;65;830;25904
+Nieprzestrzeganie znakÃ³w i innych sygnaÅ‚Ã³w;120;1;159;1976
+Niestosowanie siÄ™ do sygnalizacji Å›wietlnej;453;23;648;3757
+Nieudzielenie pierwszeÅ„stwa przejazdu;7420;343;9516;70165
+NieustÄ…pienie pierwszeÅ„stwa pieszemu na przejÅ›ciu dla pieszych;3487;206;3492;2677
+NieustÄ…pienie pierwszeÅ„stwa pieszemu przy skrÄ™caniu w drogÄ™ poprzecznÄ…;241;2;249;260
+NieustÄ…pienie pierwszeÅ„stwa pieszemu w innych okolicznoÅ›ciach;542;35;521;611
 
-Nieudzielenie pierwszeñstwa pieszemu;48;1;56;153
+Nieudzielenie pierwszeÅ„stwa pieszemu;48;1;56;153
 
 
-Niezachowanie bezp. odleg. miêdzy pojazdami;2521;51;3332;67885
-Omijanie pojazdu przed przejœciem dla pieszych;80;2;89;108
-Wyprzedzanie pojazdu przed przejœciem dla pieszych;15;1;14;54
-Zmêczenie, zaœniêcie;655;98;981;2393
+Niezachowanie bezp. odleg. miÄ™dzy pojazdami;2521;51;3332;67885
+Omijanie pojazdu przed przejÅ›ciem dla pieszych;80;2;89;108
+Wyprzedzanie pojazdu przed przejÅ›ciem dla pieszych;15;1;14;54
+ZmÄ™czenie, zaÅ›niÄ™cie;655;98;981;2393
 Podsumowanie;29081;2284;36150;347845
->>>>>>> Stashed changes:Test/Bazy/2016/Przyczyny_zachowanie_kierujÄ…cego.csv
