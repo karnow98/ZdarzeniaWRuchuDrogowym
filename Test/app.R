@@ -43,8 +43,10 @@ server <- function(input, output) {
     # Render a barplot
     barplot(data2[,input$region], 
             main=input$region,
-            ylab="Liczba Wypadkow",
-            xlab="Dni",cex.names=0.9, xpd = FALSE)
+            xlab="Dni",cex.names=0.7, xpd = FALSE,
+            las=1, horiz = TRUE,legend = colnames(data2))
+    ## pie(data2[,input$region],labels=rownames(data2),
+    ##     main="Pie Chart of Countries ")
   })
 }
 
