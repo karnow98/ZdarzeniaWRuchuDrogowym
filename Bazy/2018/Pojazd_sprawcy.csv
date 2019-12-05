@@ -1,26 +1,18 @@
-<<<<<<< Updated upstream:Bazy/2018/Pojazd_sprawcy.csv
-Sprawcy - pojazd uczestnika;;;;
-;;;;
-;;;;
-;2018;;;
-Rodzaj pojazdu;Liczba Wypadkow;Liczba Zabitych;Liczba Rannych;Liczba Kolizji
-=======
 Rodzaj pojazdu;Liczba wypadkow;Liczba zabitych;Liczba rannych;Liczba kolizji
->>>>>>> Stashed changes:Test/Bazy/2018/Pojazd_sprawcy.csv
 Autobus inny;92;15;209;1604
 Autobus komunikacji publicznej;299;5;365;2382
-Ci�gnik rolniczy;130;19;143;1572
-Czteroko�owiec;35;3;37;75
-Czteroko�owiec lekki;19;2;20;70
+Cišgnik rolniczy;130;19;143;1572
+Czterokołowiec;35;3;37;75
+Czterokołowiec lekki;19;2;20;70
 Inny;79;9;85;1201
 Motocykl inny;852;121;843;2076
 Motocykl o poj. do 125 cm3 ( do 11 kw/0,1 KW/kg);214;25;216;618
 Motorower;635;45;638;2291
-Poci�g;0;0;0;4
+Pociąg;0;0;0;4
 Pojazd nieustalony;557;10;596;19059
 Rower;1713;132;1636;4697
-Samoch�d ci�arowy DMC do 3,5 T;1350;123;1637;23183
-Samoch�d ci�arowy DMC powy�ej 3,5 T;878;116;1077;22977
-Samoch�d osobowy;20622;1547;25614;291762
+Samochód ciężarowy DMC do 3,5 T;1350;123;1637;23183
+Samochód ciężarowy DMC powyżej 3,5 T;878;116;1077;22977
+Samochód osobowy;20622;1547;25614;291762
 Tramwaj, trolejbus;81;5;145;231
 Podsumowanie;27556;2177;33261;373802
