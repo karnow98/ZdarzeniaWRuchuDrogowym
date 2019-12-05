@@ -1,47 +1,19 @@
-<<<<<<< Updated upstream:Bazy/2017/Charakterystyka-miejsca.csv
-Charakterystyka miejsca zdarzenia;;;;
-2017 r.;;;;
-;;;;
-;;;;
-;2017;;;
-Informacja dodatkowa;Liczba wypadk體;Liczba zabitych;Liczba rannych;Liczba kolizji
+Informacja dodatkowa;Liczba wypadk贸w;Liczba zabitych;Liczba rannych;Liczba kolizji
 Chodnik, droga dla pieszych;589;22;628;4116
-Droga, pas ruchu, 渓uza dla rower體;338;2;359;809
+Droga, pas ruchu, 艣luza dla rower贸w;338;2;359;809
 Jezdnia;24198;2198;30306;371547
-Most, wiadukt, 彻cznica, tunel;100;7;130;1954
+Most, wiadukt, 艂膮cznica, tunel;100;7;130;1954
 Parking, plac, MOP;257;7;270;30979
-Pas dziel筩y jezdnie;34;4;33;802
+Pas dziel膮cy jezdnie;34;4;33;802
 Pobocze;967;150;1155;8725
-Przejazd dla rowerzyst體;465;6;462;871
-Przejazd kolejowy niestrze縪ny;43;19;49;324
-Przejazd kolejowy strze縪ny;14;6;26;1047
+Przejazd dla rowerzyst贸w;465;6;462;871
+Przejazd kolejowy niestrze偶ony;43;19;49;324
+Przejazd kolejowy strze偶ony;14;6;26;1047
 Przejazd tramwajowy, torowisko tramwajowe;170;11;220;695
-Przej渃ie dla pieszych;4322;267;4309;4124
-Przewi箊ka na drodze dwujezdniowej;20;1;20;138
+Przej艣cie dla pieszych;4322;267;4309;4124
+Przewi膮zka na drodze dwujezdniowej;20;1;20;138
 Przystanek komunikacji publicznej;170;8;177;499
 Roboty drogowe, oznakowanie tymczasowe;95;11;129;1660
-Skarpa, r體;695;100;865;4525
-Wjazd, wyjazd z posesji, pola;283;12;328;3650
-Podsumowanie ca砶owite;32760;2831;39466;436465
-;;;;
-=======
-Informacja dodatkowa;Liczba wypadk體;Liczba zabitych;Liczba rannych;Liczba kolizji
-Chodnik, droga dla pieszych;589;22;628;4116
-Droga, pas ruchu, 渓uza dla rower體;338;2;359;809
-Jezdnia;24198;2198;30306;371547
-Most, wiadukt, 彻cznica, tunel;100;7;130;1954
-Parking, plac, MOP;257;7;270;30979
-Pas dziel筩y jezdnie;34;4;33;802
-Pobocze;967;150;1155;8725
-Przejazd dla rowerzyst體;465;6;462;871
-Przejazd kolejowy niestrze縪ny;43;19;49;324
-Przejazd kolejowy strze縪ny;14;6;26;1047
-Przejazd tramwajowy, torowisko tramwajowe;170;11;220;695
-Przej渃ie dla pieszych;4322;267;4309;4124
-Przewi箊ka na drodze dwujezdniowej;20;1;20;138
-Przystanek komunikacji publicznej;170;8;177;499
-Roboty drogowe, oznakowanie tymczasowe;95;11;129;1660
-Skarpa, r體;695;100;865;4525
+Skarpa, r贸w;695;100;865;4525
 Wjazd, wyjazd z posesji, pola;283;12;328;3650
 Podsumowanie;32760;2831;39466;436465
->>>>>>> Stashed changes:Test/Bazy/2017/Charakterystyka_miejsca.csv
