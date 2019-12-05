@@ -1,18 +1,18 @@
-Rodzaj pojazdu;Liczba wypadk闚;Liczba zabitych;Liczba rannych;Liczba kolizji
+Rodzaj pojazdu;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
 Autobus inny;101;4;156;1386
 Autobus komunikacji publicznej;318;11;452;2312
-Ci鉚nik rolniczy;118;16;133;1446
-Czteroko這wiec;32;6;33;57
-Czteroko這wiec lekki;19;3;17;68
+Ciągnik rolniczy;118;16;133;1446
+Czterokołowiec;32;6;33;57
+Czterokołowiec lekki;19;3;17;68
 Inny;71;4;87;1065
 Motocykl inny;823;132;801;1809
 Motocykl o poj. do 125 cm3 ( do 11 kw/0,1 KW/kg);172;16;176;445
 Motorower;731;54;762;2434
-Poci鉚;0;0;0;3
+Pociąg;0;0;0;3
 Pojazd nieustalony;532;11;576;13045
 Rower;1778;139;1703;4117
-Samoch鏚 ci篹arowy DMC do 3,5 T;1297;122;1643;18853
-Samoch鏚 ci篹arowy DMC powy瞠j 3,5 T;904;108;1165;20762
-Samoch鏚 osobowy;22134;1657;28342;279828
+Samochód ciężarowy DMC do 3,5 T;1297;122;1643;18853
+Samochód ciężarowy DMC powyżej 3,5 T;904;108;1165;20762
+Samochód osobowy;22134;1657;28342;279828
 Tramwaj, trolejbus;51;1;104;215
 Podsumowanie;29081;2284;36150;347845
