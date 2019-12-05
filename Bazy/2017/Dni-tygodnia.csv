@@ -1,26 +1,9 @@
-<<<<<<< Updated upstream:Bazy/2017/Dni-tygodnia.csv
-Statystyka ogólna w podziale na dni tygodnia;;;;
-;;;;
-;;;;
-;2017;;;
-Dzieñ tygodnia;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
-Poniedzia³ek;4872;400;5750;66249
+DzieÅ„ tygodnia;Liczba wypadkÃ³w;Liczba zabitych;Liczba rannych;Liczba kolizji
+PoniedziaÅ‚ek;4872;400;5750;66249
 Wtorek;4564;392;5453;64656
-Œroda;4744;356;5461;66256
+Åšroda;4744;356;5461;66256
 Czwartek;4846;403;5722;69170
-Pi¹tek;5474;443;6493;77056
-Sobota;4398;423;5514;52868
-Niedziela;3862;414;5073;40214
-Podsumowanie ca³kowite;32760;2831;39466;436469
-;;;;
-=======
-Dzieñ tygodnia;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
-Poniedzia³ek;4872;400;5750;66249
-Wtorek;4564;392;5453;64656
-Œroda;4744;356;5461;66256
-Czwartek;4846;403;5722;69170
-Pi¹tek;5474;443;6493;77056
+PiÄ…tek;5474;443;6493;77056
 Sobota;4398;423;5514;52868
 Niedziela;3862;414;5073;40214
 Podsumowanie;32760;2831;39466;436469
->>>>>>> Stashed changes:Test/Bazy/2017/Dni_tygodnia.csv
