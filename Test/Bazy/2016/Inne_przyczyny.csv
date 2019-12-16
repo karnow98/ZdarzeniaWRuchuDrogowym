@@ -1,18 +1,15 @@
-Inne przyczyny;Liczba wypadków;Liczba zabitych;Liczba rannych;Liczba kolizji
-Dzia³anie sygnalizacji œwietlnej;0;0;0;2
-Inne;198;10;241;4041
-Nieprawid³owa organizacja ruchu;3;0;3;31
-Nieprawid³owo dzia³aj¹ca zapora, rogatka;0;0;0;9
-Nieprawid³owo zabezp. roboty drogowe;2;0;2;93
-Niesprawnoœæ techniczna pojazdu;60;8;77;696
-Nieustalone;869;253;1000;7984
-Niew³aœciwy stan jezdni;17;0;20;3736
-Niezawiniona niesprawnoœæ techniczna pojazdu;4;0;4;139
-Obiekty, zwierzêta na drodze;321;21;393;25066
-Oœlepienie przez inny pojazd lub s³oñce;29;4;29;132
-Po¿ar pojazdu;0;0;0;234
-Stan jezdni;39;2;38;4303
-Utrata przytomnoœci, œmieræ kieruj¹cego;86;5;101;383
-Z winy pasa¿era;142;1;149;375
-Zabezpieczenie robót na drodze;3;0;4;310
-Podsumowanie ca³kowite;1773;304;2061;47534
+Inne przyczyny;Liczba wypadkow;Liczba zabitych;Liczba rannych;Liczba kolizji
+Dzia³anie sygnalizacji œwietlnej;0;0;0;5
+Inne;142;7;156;3982
+Nieprawid³owo dzia³aj¹ca zapora kolej.;0;0;0;7
+Niesprawnoœæ techniczna pojazdu;38;7;55;624
+Nieustalone;807;247;836;9531
+Obiekty, zwierzêta na drodze;332;20;403;25895
+Organizacja ruchu;1;0;2;26
+Oœlepienie przez inny pojazd lub s³oñce;24;3;25;174
+Po¿ar pojazdu;2;1;1;218
+Stan jezdni;77;1;86;8555
+Utrata przytomnoœci, œmieræ kieruj¹cego;76;7;101;354
+Z winy pasa¿era;116;5;118;398
+Zabezpieczenie robót na drodze;4;0;4;453
+Podsumowanie;1619;298;1787;50222
