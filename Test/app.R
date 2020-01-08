@@ -9,6 +9,7 @@
 
 library(shiny)
 library(datasets)
+library(RColorBrewer)
 options(scipen=999)
 data <- read.table("Dni.csv", header = T, sep = ";",row.names = 1)
 data2 <- data.matrix(data)
@@ -41,10 +42,10 @@ server <- function(input, output) {
   
   output$phonePlot <- renderPlot({
     # Render a barplot
-    barplot(data2[,input$region], 
+       barplot(data2[-nrow(data2),input$region], 
             main=input$region,
             xlab="Dni",cex.names=0.7, xpd = FALSE,
-            las=1, horiz = TRUE,legend = rownames(data2))
+            las=1, horiz = TRUE,legend = rownames(data2[-nrow(data2),]),col = coul <- brewer.pal(5, "Set2") )
     ## pie(data2[,input$region],labels=rownames(data2),
     ##     main="Pie Chart of Countries ")
   })
