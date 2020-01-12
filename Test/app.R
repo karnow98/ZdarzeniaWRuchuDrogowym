@@ -1,29 +1,24 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-# Eryk Olszewski dopisuje sie :p
+
 
 library(shiny)
 library(datasets)
 library(RColorBrewer)
+
+#paleta kolorów
 n <- 60
 qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
 col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
+#inna notacja
 options(scipen=999)
+#wczytane pliki
 data <- read.table("Dni.csv", header = T, sep = ";",row.names = 1)
 data2 <- data.matrix(data)
 data3 <- read.table("Woj.csv", header = T, sep = ";",row.names = 1)
 data4 <- data.matrix(data3)
-# Define UI for application that draws a histogram
+
 ui <- fluidPage( 
   
-  # Give the page a title
   titlePanel("Wypadki drogowe"),
-  # Generate a row with a sidebar
   sidebarLayout(      
     # Define the sidebar with one input
     sidebarPanel(
@@ -31,7 +26,7 @@ ui <- fluidPage(
                   choices=colnames(data2)),
       hr(),
         selectInput("Rok", "Wybierz rok:",
-                  choices = c("rock", "pressure", "cars")),
+                  choices = c("2018", "2017", "2016")),
       hr(),
       selectInput("Plik", "Wybierz rodzaj danych:",
                   choices = c("Dni", "Woj")),
@@ -41,7 +36,6 @@ ui <- fluidPage(
     
     
     
-    # Create a spot for the barplot
     mainPanel(
       plotOutput("phonePlot"),
       textOutput("Stats")
@@ -51,7 +45,6 @@ ui <- fluidPage(
 )
 
 
-# Define server logic to summarize and view selected dataset ----
 server <- function(input, output) {
   
   
@@ -61,8 +54,11 @@ server <- function(input, output) {
            "Woj" = data4)
   })
   
+  output$Stats <- renderText({ 
+    paste("Najmniejsza", input$region, "to", head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1), "w", names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1)))
+  })
+  
   output$phonePlot <- renderPlot({
-    # Render a barplot
        barplot(datasetInput()[-nrow(datasetInput()),input$region], 
             main=input$region,
             xlab=input$region,cex.names=0.7, xpd = FALSE,
@@ -71,5 +67,5 @@ server <- function(input, output) {
   })
 }
 
-# Run the application 
+
 shinyApp(ui = ui, server = server)
