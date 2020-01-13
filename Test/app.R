@@ -58,6 +58,14 @@ server <- function(input, output) {
     paste("Najmniejsza", input$region, "to", head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1), "w", names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1)))
   })
   
+  HurtStats <- reactive({
+    datasetInput()[length(datasetInput()),"Liczba.Rannych"] + datasetInput()[length(datasetInput()),"Liczba.Zabitych"]
+  })
+  
+  AccidentsStats <- reactive({
+    datasetInput()[length(datasetInput()),"Liczba.Kolizji"] + datasetInput()[length(datasetInput()),"Liczba.Wypadków"]
+  })
+  
   output$phonePlot <- renderPlot({
        barplot(datasetInput()[-nrow(datasetInput()),input$region], 
             main=input$region,
