@@ -16,6 +16,8 @@ data2 <- data.matrix(data)
 data3 <- read.table("Woj.csv", header = T, sep = ";",row.names = 1)
 data4 <- data.matrix(data3)
 
+listfiles <- list(data2, data4)
+
 ui <- fluidPage( 
   
   titlePanel("Wypadki drogowe"),
@@ -56,7 +58,7 @@ server <- function(input, output) {
   
   output$Stats <- renderText({ 
     paste("Najmniejsza", input$region, "to", head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1), "w", names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1)))
-    paste("Test statystyk", HurtStats(), AccidentsStats())
+    paste("Test statystyk", YearsHurtStats(), AccidentsStats())
   })
   
   HurtStats <- reactive({
@@ -65,6 +67,25 @@ server <- function(input, output) {
   
   AccidentsStats <- reactive({
     datasetInput()[nrow(datasetInput()),"Liczba.Kolizji"] + datasetInput()[nrow(datasetInput()),"Liczba.Wypadkow"]
+  })
+  
+  YearsHurtStats <- reactive({
+    value <- 0
+    for(i in listfiles)
+    {
+      value <- value + i[nrow(i),"Liczba.Rannych"] + i[nrow(i),"Liczba.Zabitych"]
+    }
+    value
+    
+  })
+  
+  YearsAccidentsStats <- reactive({
+    value <- 0
+    for(i in listfiles)
+    {
+      value <- value + i[nrow(i),"Liczba.Wypadkow"] + i[nrow(i),"Liczba.Kolizji"]
+    }
+    value
   })
   
   
