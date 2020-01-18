@@ -40,7 +40,26 @@ data3 <- read.table("Bazy/2018/Miesiące.csv", header = T, sep = ";",row.names =
 Mie2018 <- data.matrix(data3)
 
 
-listfiles <- list(data2, data4)
+listfiles <- list(Mie2016,Mie2017,Mie2018)
+#Ogólne statystyki poszkodowanych dla wszystkich lat(Ranni i Zabici)
+YearsHurtStats <- ({
+  value <- 0
+  for(i in listfiles)
+  {
+    value <- value + i[nrow(i),"Liczba.Rannych"] + i[nrow(i),"Liczba.Zabitych"]
+  }
+  value
+  
+})
+# Ilość wypadków i kolizji dla wszystkich lat
+YearsAccidentsStats <- ({
+  value <- 0
+  for(i in listfiles)
+  {
+    value <- value + i[nrow(i),"Liczba.Wypadkow"] + i[nrow(i),"Liczba.Kolizji"]
+  }
+  value
+})
 
 ui <- fluidPage( 
   
@@ -131,26 +150,9 @@ server <- function(input, output) {
   
   AccidentsStats <- reactive({
     datasetInput()[nrow(datasetInput()),"Liczba.Kolizji"] + datasetInput()[nrow(datasetInput()),"Liczba.Wypadkow"]
-  }) # Wyszystkie lata dla tego rodzaju pliku(np Dni)
+  }) # Ilosc wypadkow dla tego rodzaju pliku(np Dni) w danym roku
   
-  YearsHurtStats <- reactive({
-    value <- 0
-    for(i in listfiles)
-    {
-      value <- value + i[nrow(i),"Liczba.Rannych"] + i[nrow(i),"Liczba.Zabitych"]
-    }
-    value
-    
-  })
-  
-  YearsAccidentsStats <- reactive({
-    value <- 0
-    for(i in listfiles)
-    {
-      value <- value + i[nrow(i),"Liczba.Wypadkow"] + i[nrow(i),"Liczba.Kolizji"]
-    }
-    value
-  })
+
   
   
   
