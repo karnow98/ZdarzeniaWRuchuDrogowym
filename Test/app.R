@@ -144,7 +144,7 @@ server <- function(input, output) {
   
   #Top3<-data.frame(structure(list(Top3forCategoryinFileNames,Top3forCategoryinFileValue)))
   #Top3<-data.frame(structure(Top3forCategoryinFileNames,Top3forCategoryinFileValue))
-  #Top3<-list("Top3forCategoryinFileNames","Top3forCategoryinFileValue")
+  Top3<-list("Top3forCategoryinFileNames","Top3forCategoryinFileValue")
   #Top3<-reactive(list("Top3forCategoryinFileNames","Top3forCategoryinFileValue"))
   
   #Top3 <- vector(mode="list", length = 3)
