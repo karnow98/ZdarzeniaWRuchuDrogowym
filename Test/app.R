@@ -61,6 +61,7 @@ YearsAccidentsStats <- ({
   value
 })
 
+
 ui <- fluidPage( 
   
   titlePanel("Wypadki drogowe"),
@@ -68,24 +69,27 @@ ui <- fluidPage(
     # Define the sidebar with one input
     sidebarPanel(
       selectInput("region", "Wybierz kat:", 
-                  choices=colnames(data2)),
-      hr(),
+                  choices=colnames(data3)),
+      #hr(),
         selectInput("Rok", "Wybierz rok:",
                   choices = c("2018", "2017", "2016")),
-      hr(),
+      #hr(),
       selectInput("Plik", "Wybierz rodzaj danych:",
                   choices = c("Godziny","Dni", "Miesiace", "Wojewodztwa" )),
-
+      
+      span(actionButton("top","TOP 3"),
+           style="position:absolute;right:2em;"),
+      br(),
+      br(),
+      sidebarPanel(),
       helpText("Dane ze strony dane.gov.pl")
     ),
-    
     
     
     mainPanel(
       plotOutput("phonePlot"),
       textOutput("Stats")
-    )
-    
+    ),
   )
 )
 
@@ -129,19 +133,31 @@ server <- function(input, output) {
            
            )
   })
+
   
   output$Stats <- renderText({ 
   #  paste("Najmniejsza", input$region, "to", head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1), "w", names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1)))
    # paste("Test statystyk", YearsHurtStats(), AccidentsStats())
   }) ## sprawdzanie którego używałem do wypisywania danych plus 
   
+  
+  
   Top3forCategoryinFileValue <- reactive({
     head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1)
-  }) #wartosći trzech najlepszych słupków w pokazanym wykresie
+  }) #wartości trzech najlepszych słupków w pokazanym wykresie
   
   Top3forCategoryinFileNames <- reactive({
     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1))
   }) #nazwy powyższych najlepszych wartości
+  
+  #Top3<-data.frame(structure(list(Top3forCategoryinFileNames,Top3forCategoryinFileValue)))
+  #Top3<-data.frame(structure(Top3forCategoryinFileNames,Top3forCategoryinFileValue))
+  #Top3<-list("Top3forCategoryinFileNames","Top3forCategoryinFileValue")
+  #Top3<-reactive(list("Top3forCategoryinFileNames","Top3forCategoryinFileValue"))
+  
+  #Top3 <- vector(mode="list", length = 3)
+  #names(Top3) <- c("Top3forCategoryinFileNames","Top3forCategoryinFileValue")
+  
   
   
   HurtStats <- reactive({
@@ -152,7 +168,20 @@ server <- function(input, output) {
     datasetInput()[nrow(datasetInput()),"Liczba.Kolizji"] + datasetInput()[nrow(datasetInput()),"Liczba.Wypadkow"]
   }) # Ilosc wypadkow dla tego rodzaju pliku(np Dni) w danym roku
   
-
+  
+  observeEvent(input$top,{
+    showModal(modalDialog(
+      title="Top 3",
+      #output$tabela <-renderTable(iris),
+      #"Tutaj dane",
+      output$tabela <- renderDataTable(Top3, option=list(lengthChange=FALSE)),
+      easyClose = TRUE,
+      footer = tagList(
+        modalButton("OK"),
+        #actionButton("ok","ok")
+      )
+    ))
+  })
   
   
   
