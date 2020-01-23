@@ -1,8 +1,7 @@
-
-
 library(shiny)
 library(datasets)
 library(RColorBrewer)
+library(shinydashboard)
 
 #paleta kolorów
 n <- 60
@@ -62,18 +61,14 @@ YearsAccidentsStats <- ({
 })
 
 
-ui <- fluidPage( 
-  
-  titlePanel("Wypadki drogowe"),
-  sidebarLayout(      
-    # Define the sidebar with one input
-    sidebarPanel(
+#ui <- fluidPage( 
+ui <-dashboardPage( skin="purple",
+  dashboardHeader(title = "Wypadki Drogowe",disable = FALSE, .list = NULL),
+  dashboardSidebar(
       selectInput("region", "Wybierz kat:", 
                   choices=colnames(data3)),
-      #hr(),
-        selectInput("Rok", "Wybierz rok:",
+      selectInput("Rok", "Wybierz rok:",
                   choices = c("2018", "2017", "2016")),
-      #hr(),
       selectInput("Plik", "Wybierz rodzaj danych:",
                   choices = c("Godziny","Dni", "Miesiace", "Wojewodztwa" )),
       
@@ -81,15 +76,12 @@ ui <- fluidPage(
            style="position:absolute;right:2em;"),
       br(),
       br(),
-      sidebarPanel(),
-      helpText("Dane ze strony dane.gov.pl")
-    ),
-    
-    
-    mainPanel(
+      hr(),
+      helpText("Dane ze strony dane.gov.pl",align="center")
+  ),
+  dashboardBody(
       plotOutput("phonePlot"),
       textOutput("Stats")
-    ),
   )
 )
 
