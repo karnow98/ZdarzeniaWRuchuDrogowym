@@ -2,6 +2,7 @@ library(shiny)
 library(datasets)
 library(RColorBrewer)
 library(shinydashboard)
+library(shinyBS)
 
 #paleta kolorów
 n <- 60
@@ -88,7 +89,6 @@ ui <-dashboardPage( skin="purple",
 
 server <- function(input, output) {
   
-  
   datasetInput <- reactive({
     switch(input$Rok,
            "2016" = 
@@ -135,22 +135,20 @@ server <- function(input, output) {
   
   
   Top3forCategoryinFileValue <- reactive({
-    head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1)
+    head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)
   }) #wartości trzech najlepszych słupków w pokazanym wykresie
   
   Top3forCategoryinFileNames <- reactive({
-    names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1))
+    names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3))
   }) #nazwy powyższych najlepszych wartości
   
   #Top3<-data.frame(structure(list(Top3forCategoryinFileNames,Top3forCategoryinFileValue)))
   #Top3<-data.frame(structure(Top3forCategoryinFileNames,Top3forCategoryinFileValue))
-  Top3<-list("Top3forCategoryinFileNames","Top3forCategoryinFileValue")
+  #Top3<-list(Top3forCategoryinFileValue)
   #Top3<-reactive(list("Top3forCategoryinFileNames","Top3forCategoryinFileValue"))
-  
-  #Top3 <- vector(mode="list", length = 3)
+   #Top3 <- vector(mode="list", length = 3)
   #names(Top3) <- c("Top3forCategoryinFileNames","Top3forCategoryinFileValue")
-  
-  
+  #Top3<-dataTableOutput(Top3forCategoryinFileValue())
   
   HurtStats <- reactive({
     datasetInput()[nrow(datasetInput()),"Liczba.Rannych"] + datasetInput()[nrow(datasetInput()),"Liczba.Zabitych"]
@@ -166,7 +164,9 @@ server <- function(input, output) {
       title="Top 3",
       #output$tabela <-renderTable(iris),
       #"Tutaj dane",
-      output$tabela <- renderDataTable(Top3, option=list(lengthChange=FALSE)),
+      #output$tabela <- renderDataTable(Top3, option=list(lengthChange=FALSE)),
+      verbatimTextOutput("Top3forCategoryinFileValue"),
+      tableOutput("Top3forCategoryinFileValue"),
       easyClose = TRUE,
       footer = tagList(
         modalButton("OK"),
