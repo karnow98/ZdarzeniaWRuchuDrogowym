@@ -220,6 +220,25 @@ server <- function(input, output) {
     ))
   })
   
+  
+observeEvent(input$zmiany,{
+    showModal(modalDialog(
+        title="Porównanie zmian na przestrzeni lat",
+        lapply(1:(nrow(datasetInput())-1),function(i){
+            output$Stats <- renderText({ 
+                    paste(input$region, " zmieniła się w ",names(head((datasetInput()[-nrow(datasetInput()),input$region])[i])) ,"o", round(((datasetInputBefore()[i]-datasetInput()[i])/datasetInput()[i])*100,2),"%")
+                   })
+        }),
+        #output$Stats <- renderText({ 
+       #   paste(input$region, " zmieniła się w ", names(datasetInput()[]),"o", round(((datasetInputBefore()[i]-datasetInput()[i])/datasetInput()[i])*100,2),"%")
+       # }),
+        easyClose = TRUE,
+        footer = tagList(
+            modalButton("OK"),
+        )
+    ))
+})
+  
   #, "W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1], "i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]*100,2),"%"
   
   
