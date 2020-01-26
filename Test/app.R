@@ -71,7 +71,7 @@ ui <-dashboardPage( skin="purple",
       selectInput("Rok", "Wybierz rok:",
                   choices = c("2018", "2017", "2016")),
       selectInput("Plik", "Wybierz rodzaj danych:",
-                  choices = c("Godziny","Dni", "Miesiace", "Wojewodztwa" )),
+                  choices = c("Godziny","Dni", "Miesiace", "Wojewodztwa" ), selected = "Dni"),
       
       span(actionButton("top","TOP 3"),
            style="position:absolute;right:2em;"),
@@ -212,10 +212,8 @@ server <- function(input, output) {
         paste("Druga najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2], "w",     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2]), "W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[2],"i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[2]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2]*100,2), "%")
       }),
       output$Stats <- renderText({ 
-        paste("A trzcia najmniejsza to ", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3], "w",     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]),"W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[3],"i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[3]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]*100,2),"%")
+        paste("A trzecia najmniejsza to ", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3], "w",     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]),"W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[3],"i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[3]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]*100,2),"%")
       }),
-      verbatimTextOutput("Top3forCategoryinFileValue"),
-      tableOutput("Top3forCategoryinFileValue"),
       easyClose = TRUE,
       footer = tagList(
         modalButton("OK"),
