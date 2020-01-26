@@ -125,6 +125,38 @@ server <- function(input, output) {
            
            )
   })
+  
+  
+  
+  datasetInputBefore <- reactive({
+    switch(input$Rok,
+           "2016" = 
+             {
+               
+             },
+           "2017" =
+             {
+               switch(input$Plik,
+                      "Godziny"= Godz2016,
+                      "Dni" = Dni2016,
+                      "Wojewodztwa" = Woj2016,
+                      "Miesiace" = Mie2016,
+                      
+               )
+             },
+           "2018" =
+             {
+               switch(input$Plik,
+                      "Godziny"= Godz2017,
+                      "Dni" = Dni2017,
+                      "Wojewodztwa" = Woj2017,
+                      "Miesiace" = Mie2017,
+                      
+               )
+             }
+           
+    )
+  })
 
   
   output$Stats <- renderText({ 
@@ -137,6 +169,16 @@ server <- function(input, output) {
   Top3forCategoryinFileValue <- reactive({
     head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)
   }) #wartości trzech najlepszych słupków w pokazanym wykresie
+  
+  Top3forCategoryinFileValueBefore <- reactive({
+    if (!is.null(datasetInputBefore())) {
+      list("Brak danych z poprzedniego roku")
+    } else {
+      head(sort(datasetInput()[-nrow(datasetInputBefore()),input$region]),3)
+    }
+    
+  }) #wartości trzech najlepszych wyników z poprzedniego roku
+  
   
   Top3forCategoryinFileNames <- reactive({
     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3))
