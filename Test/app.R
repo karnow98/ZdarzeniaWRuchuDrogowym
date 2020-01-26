@@ -2,7 +2,7 @@ library(shiny)
 library(datasets)
 library(RColorBrewer)
 library(shinydashboard)
-library(shinyBS)
+#library(shinyBS)
 
 #paleta kolorów
 n <- 60
@@ -62,7 +62,6 @@ YearsAccidentsStats <- ({
 })
 
 
-#ui <- fluidPage( 
 ui <-dashboardPage( skin="purple",
   dashboardHeader(title = "Wypadki Drogowe",disable = FALSE, .list = NULL),
   dashboardSidebar(
@@ -73,8 +72,10 @@ ui <-dashboardPage( skin="purple",
       selectInput("Plik", "Wybierz rodzaj danych:",
                   choices = c("Godziny","Dni", "Miesiace", "Wojewodztwa" ), selected = "Dni"),
       
+      span(actionButton("zmiany","Porównanie"),
+           style="position:absolute;left:2em;"),
       span(actionButton("top","TOP 3"),
-           style="position:absolute;right:2em;"),
+            style="position:absolute;right:2em;"),
       br(),
       br(),
       hr(),
@@ -82,7 +83,7 @@ ui <-dashboardPage( skin="purple",
   ),
   dashboardBody(
       plotOutput("phonePlot"),
-      textOutput("Stats")
+      #textOutput("Stats")
   )
 )
 
@@ -182,14 +183,6 @@ server <- function(input, output) {
     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3))
   }) #nazwy powyższych najlepszych wartości
   
-  #Top3<-data.frame(structure(list(Top3forCategoryinFileNames,Top3forCategoryinFileValue)))
-  #Top3<-data.frame(structure(Top3forCategoryinFileNames,Top3forCategoryinFileValue))
-  #Top3<-list(Top3forCategoryinFileValue)
-  #Top3<-reactive(list("Top3forCategoryinFileNames","Top3forCategoryinFileValue"))
-   #Top3 <- vector(mode="list", length = 3)
-  #names(Top3) <- c("Top3forCategoryinFileNames","Top3forCategoryinFileValue")
-  #Top3<-dataTableOutput(Top3forCategoryinFileValue())
-  
   HurtStats <- reactive({
     datasetInput()[nrow(datasetInput()),"Liczba.Rannych"] + datasetInput()[nrow(datasetInput()),"Liczba.Zabitych"]
   }) 
@@ -202,26 +195,38 @@ server <- function(input, output) {
   observeEvent(input$top,{
     showModal(modalDialog(
       title="Top 3",
-      #output$tabela <-renderTable(iris),
-      #"Tutaj dane",
-      #output$tabela <- renderDataTable(Top3, option=list(lengthChange=FALSE)),
       output$Stats <- renderText({ 
-            paste("Najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1], "w",     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]), "W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1], "i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]*100,2),"%")
+          paste("Najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1], "w",
+                names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]))
         }),
       output$Stats <- renderText({ 
-        paste("Druga najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2], "w",     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2]), "W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[2],"i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[2]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2]*100,2), "%")
+          paste("Druga najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2], "w",
+               names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2]))
       }),
       output$Stats <- renderText({ 
-        paste("A trzecia najmniejsza to ", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3], "w",     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]),"W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[3],"i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[3]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]*100,2),"%")
+          paste("A trzecia najmniejsza to ", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3], "w",
+                names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]))
       }),
       easyClose = TRUE,
       footer = tagList(
         modalButton("OK"),
-        #actionButton("ok","ok")
       )
     ))
   })
   
+  #, "W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1], "i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]*100,2),"%"
+  
+  
+  observeEvent(input$zmiany,{
+    showModal(modalDialog(
+      title="Zmiany względem poprzedniego roku",
+      output$Stats <-renderText({
+        
+      }),
+      easyClose = TRUE,
+      footer = tagList(modalButton("OK"))
+    ))
+  })
   
   
   output$phonePlot <- renderPlot({
