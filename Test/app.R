@@ -221,7 +221,11 @@ server <- function(input, output) {
     showModal(modalDialog(
       title="Zmiany względem poprzedniego roku",
       output$Stats <-renderText({
-        
+        for(zmienna in -nrow(datasetInput())){
+#          output$Stats <- renderText({ 
+            paste("Najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[zmienna])
+#          })
+        }
       }),
       easyClose = TRUE,
       footer = tagList(modalButton("OK"))
