@@ -159,14 +159,12 @@ server <- function(input, output) {
   })
 
   
-  output$Stats <- renderText({ 
-  #  paste("Najmniejsza", input$region, "to", head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1), "w", names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1)))
-   # paste("Test statystyk", YearsHurtStats(), AccidentsStats())
-  }) ## sprawdzanie którego używałem do wypisywania danych plus 
+  #output$Stats <- renderText({ 
+   #paste("Najmniejsza", input$region, "to", head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1), "w", names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1)))
+  # paste("Test statystyk", YearsHurtStats(), AccidentsStats())
+  #}) ## sprawdzanie którego używałem do wypisywania danych plus 
   
-  
-  
-  Top3forCategoryinFileValue <- reactive({
+  Top3forCategoryinFileValue<- reactive({
     head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)
   }) #wartości trzech najlepszych słupków w pokazanym wykresie
   
@@ -174,7 +172,7 @@ server <- function(input, output) {
     if (!is.null(datasetInputBefore())) {
       list("Brak danych z poprzedniego roku")
     } else {
-      head(sort(datasetInput()[-nrow(datasetInputBefore()),input$region]),3)
+      head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)
     }
     
   }) #wartości trzech najlepszych wyników z poprzedniego roku
@@ -207,6 +205,15 @@ server <- function(input, output) {
       #output$tabela <-renderTable(iris),
       #"Tutaj dane",
       #output$tabela <- renderDataTable(Top3, option=list(lengthChange=FALSE)),
+      output$Stats <- renderText({ 
+            paste("Najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1], "w",     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]), "W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1], "i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]*100,2),"%")
+        }),
+      output$Stats <- renderText({ 
+        paste("Druga najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2], "w",     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2]), "W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[2],"i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[2]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2]*100,2), "%")
+      }),
+      output$Stats <- renderText({ 
+        paste("A trzcia najmniejsza to ", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3], "w",     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]),"W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[3],"i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[3]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]*100,2),"%")
+      }),
       verbatimTextOutput("Top3forCategoryinFileValue"),
       tableOutput("Top3forCategoryinFileValue"),
       easyClose = TRUE,
