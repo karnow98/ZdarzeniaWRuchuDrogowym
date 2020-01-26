@@ -196,16 +196,16 @@ server <- function(input, output) {
     showModal(modalDialog(
       title="Top 3",
       output$Stats <- renderText({ 
-          paste("Najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1], "w",
-                names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]))
+          paste("Najmniejsza", input$region, "to",Top3forCategoryinFileValue()[1], "w",
+                Top3forCategoryinFileNames()[1])
         }),
       output$Stats <- renderText({ 
-          paste("Druga najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2], "w",
-               names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[2]))
+          paste("Druga najmniejsza", input$region, "to",Top3forCategoryinFileValue()[2], "w",
+                Top3forCategoryinFileNames()[2])
       }),
       output$Stats <- renderText({ 
-          paste("A trzecia najmniejsza to ", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3], "w",
-                names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[3]))
+          paste("A trzecia najmniejsza to ", input$region, "to",Top3forCategoryinFileValue()[3], "w",
+                Top3forCategoryinFileNames()[3])
       }),
       easyClose = TRUE,
       footer = tagList(
