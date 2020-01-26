@@ -169,9 +169,10 @@ server <- function(input, output) {
     head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)
   }) #wartości trzech najlepszych słupków w pokazanym wykresie
   
+  
   Top3forCategoryinFileValueBefore <- reactive({
-    if (!is.null(datasetInputBefore())) {
-      list("Brak danych z poprzedniego roku")
+    if (is.null(datasetInputBefore())) {
+      head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)
     } else {
       head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)
     }
@@ -182,6 +183,11 @@ server <- function(input, output) {
   Top3forCategoryinFileNames <- reactive({
     names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3))
   }) #nazwy powyższych najlepszych wartości
+  
+  Top3forCategoryinFileNamesBefore <- reactive({
+    names(head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3))
+  }) #nazwy powyższych najlepszych wartości
+  
   
   HurtStats <- reactive({
     datasetInput()[nrow(datasetInput()),"Liczba.Rannych"] + datasetInput()[nrow(datasetInput()),"Liczba.Zabitych"]
@@ -197,15 +203,15 @@ server <- function(input, output) {
       title="Top 3",
       output$Stats <- renderText({ 
           paste("Najmniejsza", input$region, "to",Top3forCategoryinFileValue()[1], "w",
-                Top3forCategoryinFileNames()[1])
+                Top3forCategoryinFileNames()[1],"(", round(((Top3forCategoryinFileValueBefore()[1]-Top3forCategoryinFileValue()[1])/Top3forCategoryinFileValue()[1])*100,2),"%)")
         }),
       output$Stats <- renderText({ 
           paste("Druga najmniejsza", input$region, "to",Top3forCategoryinFileValue()[2], "w",
-                Top3forCategoryinFileNames()[2])
+                Top3forCategoryinFileNames()[2],"(", round(((Top3forCategoryinFileValueBefore()[2]-Top3forCategoryinFileValue()[2])/Top3forCategoryinFileValue()[2])*100,2),"%)")
       }),
       output$Stats <- renderText({ 
           paste("A trzecia najmniejsza to ", input$region, "to",Top3forCategoryinFileValue()[3], "w",
-                Top3forCategoryinFileNames()[3])
+                Top3forCategoryinFileNames()[3],"(", round(((Top3forCategoryinFileValueBefore()[3]-Top3forCategoryinFileValue()[3])/Top3forCategoryinFileValue()[3])*100,2),"%)")
       }),
       easyClose = TRUE,
       footer = tagList(
@@ -216,21 +222,6 @@ server <- function(input, output) {
   
   #, "W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1], "i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]*100,2),"%"
   
-  
-  observeEvent(input$zmiany,{
-    showModal(modalDialog(
-      title="Zmiany względem poprzedniego roku",
-      output$Stats <-renderText({
-        for(zmienna in -nrow(datasetInput())){
-#          output$Stats <- renderText({ 
-            paste("Najmniejsza", input$region, "to",head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[zmienna])
-#          })
-        }
-      }),
-      easyClose = TRUE,
-      footer = tagList(modalButton("OK"))
-    ))
-  })
   
   
   output$phonePlot <- renderPlot({
