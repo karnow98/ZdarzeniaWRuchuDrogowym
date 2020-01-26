@@ -83,7 +83,7 @@ ui <-dashboardPage( skin="purple",
   ),
   dashboardBody(
       plotOutput("phonePlot"),
-      #textOutput("Stats")
+      htmlOutput("Overall")
   )
 )
 
@@ -159,6 +159,9 @@ server <- function(input, output) {
     )
   })
 
+  output$Overall <- renderText({ 
+    paste("<h4><b>Statystyki ogólne:  ", "Ranni/Zabici: ",  HurtStats(),", ", "Wypadki/Kolizje: ",  AccidentsStats(),"</h4></b>")
+  }) ## sprawdzanie którego używałem do wypisywania danych plus 
   
   #output$Stats <- renderText({ 
    #paste("Najmniejsza", input$region, "to", head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1), "w", names(head(sort(datasetInput()[-nrow(datasetInput()),input$region]),1)))
