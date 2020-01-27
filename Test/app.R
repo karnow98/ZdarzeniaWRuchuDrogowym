@@ -3,6 +3,7 @@ library(datasets)
 library(RColorBrewer)
 library(shinydashboard)
 #library(shinyBS)
+#library(rsconnect)
 
 #paleta kolorów
 n <- 60
@@ -11,32 +12,32 @@ col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_co
 #inna notacja
 options(scipen=999)
 #wczytane pliki
-data <- read.table("Bazy/2016/Dni_tygodnia.csv", header = T, sep = ";",row.names = 1)
+data <- read.table("./Bazy/2016/Dni_tygodnia.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Dni2016 <- data.matrix(data)
-data3 <- read.table("Bazy/2017/Dni_tygodnia.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2017/Dni_tygodnia.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Dni2017 <- data.matrix(data3)
-data3 <- read.table("Bazy/2018/Dni_tygodnia.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2018/Dni_tygodnia.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Dni2018 <- data.matrix(data3)
 
-data3 <- read.table("Bazy/2016/Godziny.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2016/Godziny.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Godz2016 <- data.matrix(data3)
-data3 <- read.table("Bazy/2017/Godziny.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2017/Godziny.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Godz2017 <- data.matrix(data3)
-data3 <- read.table("Bazy/2018/Godziny.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2018/Godziny.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Godz2018 <- data.matrix(data3)
 
-data3 <- read.table("Bazy/2016/Województwa.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2016/Wojewodztwa.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Woj2016 <- data.matrix(data3)
-data3 <- read.table("Bazy/2017/Województwa.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2017/Wojewodztwa.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Woj2017 <- data.matrix(data3)
-data3 <- read.table("Bazy/2018/Województwa.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2018/Wojewodztwa.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Woj2018 <- data.matrix(data3)
 
-data3 <- read.table("Bazy/2016/Miesiące.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2016/Miesiace.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Mie2016 <- data.matrix(data3)
-data3 <- read.table("Bazy/2017/Miesiące.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2017/Miesiace.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Mie2017 <- data.matrix(data3)
-data3 <- read.table("Bazy/2018/Miesiące.csv", header = T, sep = ";",row.names = 1)
+data3 <- read.table("./Bazy/2018/Miesiace.csv", header = T, sep = ";",row.names = 1, encoding = 'UTF-8')
 Mie2018 <- data.matrix(data3)
 
 
@@ -65,7 +66,7 @@ YearsAccidentsStats <- ({
 ui <-dashboardPage( skin="purple",
   dashboardHeader(title = "Wypadki Drogowe",disable = FALSE, .list = NULL),
   dashboardSidebar(
-      selectInput("region", "Wybierz kat:", 
+      selectInput("region", "Wybierz kategorie:", 
                   choices=colnames(data3)),
       selectInput("Rok", "Wybierz rok:",
                   choices = c("2018", "2017", "2016")),
@@ -229,7 +230,7 @@ observeEvent(input$zmiany,{
         title="Porównanie zmian na przestrzeni lat",
         lapply(1:(nrow(datasetInput())-1),function(i){
             output$Stats <- renderText({ 
-                    paste(input$region, " zmieniła się w ",names(head((datasetInput()[-nrow(datasetInput()),input$region])[i])) ,"o", round(((datasetInputBefore()[i]-datasetInput()[i])/datasetInput()[i])*100,2),"%")
+                    paste(input$region, " zmieniła się w ",names(head((datasetInput()[-nrow(datasetInput()),input$region])[i])) ,"o", round(((datasetInputBefore()[i]-datasetInput()[i])/datasetInput()[i])*100,2),"% w stosunku do poprzedniego roku.")
                    })
         }),
         #output$Stats <- renderText({ 
@@ -241,9 +242,6 @@ observeEvent(input$zmiany,{
         )
     ))
 })
-  
-  #, "W porównaniu do zeszłego roku", head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1], "i zmalało/zwiększyło o",round((head(sort(datasetInputBefore()[-nrow(datasetInputBefore()),input$region]),3)[1]-head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1])/head(sort(datasetInput()[-nrow(datasetInput()),input$region]),3)[1]*100,2),"%"
-  
   
   
   output$phonePlot <- renderPlot({

@@ -1,0 +1,10 @@
+name: test
+title:
+username:
+account: karnow98
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1706559
+bundleId: 2754911
+url: https://karnow98.shinyapps.io/test/
+when: 1580085809.4247
